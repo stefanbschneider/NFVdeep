@@ -12,6 +12,8 @@ While the implemented agent did learn over time, we were not able to reproduce t
 
 ## Setup
 
+Requires Linux and Python 3.6+.
+
 **New in v1.1:**
 
 Simply install within a virtualenv with
