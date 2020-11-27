@@ -14,7 +14,7 @@ from nfvdeep.agent.baselines import *
 from nfvdeep.agent.logging import MetricLoggingCallback, NFVDeepMonitor
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
 
     # arguments to specify parameters of the experiment evaluation
@@ -114,3 +114,7 @@ if __name__ == '__main__':
 
     # save experiments to disk at specified output path
     safe_experiment(results, vars(args))
+
+
+if __name__ == '__main__':
+    main()

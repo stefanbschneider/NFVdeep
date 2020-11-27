@@ -11,9 +11,33 @@ While the implemented agent did learn over time, we were not able to reproduce t
 **Developers**: [Nils Rudminat](https://github.com/NilsLuca), [Stefan Werner](https://github.com/stwerner97)
 
 ## Setup
+
+**New in v1.1:**
+
+Simply install within a virtualenv with
+
+```
+python setup.py install
+```
+
+**Old, now deprecated:**
+
 Assuming an Anaconda (version 4.8.4) distribution has already been installed on an Ubuntu 18.04 machine, the environment can simply be cloned via `conda env create -f environment.yml`. Depending on your system's setup, the installation of additional packages for ``RayTune`` and the applied `Tensorflow` version might be necessary.  
 
-## Experiments
+## Usage
+
+**New in v1.1:**
+
+```
+# to display all CLI options
+nfvdeep -h
+
+# example call to NFVdeep
+nfvdeep --agent PPO --overlay data/abilene.gpickle --requests data/requests.json --output results
+```
+
+**Old, now deprecated:**
+
 The `script.py` file serves as an interface to running either baseline or DRL agents on the NFVdeep environment with their default parameterization, i.e. whithout employing hyperparamter optimization. Here, you can specify the overlay topology and the network's resources, as well as properties of the arrival process. For instance, we may train an stable-baseline's `PPO` DRL agent on the `abilene` network with incoming requests arising from a Poisson process by executing:
 ```console
 python script.py

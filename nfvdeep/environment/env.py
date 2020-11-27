@@ -5,10 +5,10 @@ import numpy as np
 from gym import spaces
 from pathlib import Path
 from copy import deepcopy
-from environment.network import Network
-from environment.arrival import ArrivalProcess
+from nfvdeep.environment.network import Network
+from nfvdeep.environment.arrival import ArrivalProcess
 from tabulate import tabulate
-from environment.sfv import ServiceFunctionChain
+from nfvdeep.environment.sfv import ServiceFunctionChain
 
 
 class Env(gym.Env):
